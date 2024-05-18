@@ -56,5 +56,18 @@ function render(inputs, position = 0) {
     inputs[position].focus();
 }
 
+/**
+ * @param {HTMLInputElement[]} inputs
+ * @returns {string[]}
+ */
+function handleSave(inputs) {
+    /** @type {string[]} */
+    const result = [];
+    inputs.forEach((input) => {
+        result.push(input.value);
+    });
+    return result;
+}
+
 // Init
 createNewInput(inputs);
