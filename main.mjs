@@ -15,7 +15,7 @@ function onKeyDown(e, inputs, input) {
     if (e.key === "Enter" && e.ctrlKey) {
         createNewInput(inputs, position + 1);
     } else if (e.key === "ArrowDown") {
-        if (position < inputs.length) inputs[position + 1].focus();
+        if (position < inputs.length - 1) inputs[position + 1].focus();
     } else if (e.key === "ArrowUp") {
         if (position - 1 >= 0) inputs[position - 1].focus();
     } else if (
