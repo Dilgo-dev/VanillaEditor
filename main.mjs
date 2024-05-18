@@ -12,7 +12,7 @@ let inputs = [];
  */
 function onKeyDown(e, inputs, input) {
     const position = inputs.indexOf(input);
-    if (e.key === "Enter" && e.ctrlKey) {
+    if (e.key === "Enter") {
         createNewInput(inputs, position + 1);
     } else if (e.key === "ArrowDown") {
         if (position < inputs.length - 1) inputs[position + 1].focus();
@@ -20,7 +20,7 @@ function onKeyDown(e, inputs, input) {
         if (position - 1 >= 0) inputs[position - 1].focus();
     } else if (
         (e.key === "Backspace" && inputs[position].value === "") ||
-        (e.key === "Backspace" && e.ctrlKey)
+        (e.key === "Backspace" && e.ctrlKey && e.shiftKey)
     ) {
         if (inputs.length === 1) return;
         e.preventDefault;
