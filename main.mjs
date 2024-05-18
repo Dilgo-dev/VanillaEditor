@@ -71,3 +71,8 @@ function handleSave(inputs) {
 
 // Init
 createNewInput(inputs);
+
+SAVE.addEventListener("click", () => {
+    const result = handleSave(inputs);
+    console.log(result);
+});
